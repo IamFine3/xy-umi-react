@@ -1,13 +1,16 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  antd: {},
+  antd: {
+    // dark: true,
+  },
   access: {},
   model: {},
   initialState: {},
   request: {},
   layout: {
-    title: 'xy-umi',
+    title: 'xy-umi-react',
+    navTheme: 'dark',
   },
   routes: [
     {
@@ -25,10 +28,14 @@ export default defineConfig({
       component: './Access',
     },
     {
-        name: ' CRUD 示例',
-        path: '/table',
-        component: './Table',
-    },
+      name: ' CRUD 示例',
+      path: '/table',
+      component: './Table',
+    },{
+      name: "账户列表",
+      path: '/account',
+      component: './Account',
+    }
   ],
   npmClient: 'npm',
 });
